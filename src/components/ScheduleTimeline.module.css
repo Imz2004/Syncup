@@ -1,0 +1,262 @@
+.scheduleWrapper {
+  margin-top: 36px;
+}
+
+.trackNav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.trackBtn {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 18px 24px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  color: var(--text-muted);
+}
+
+.trackBtn:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.activeTrack {
+  background: rgba(249, 115, 22, 0.1);
+  border-color: var(--warm-primary);
+  color: #ffffff;
+  box-shadow: 0 0 25px rgba(249, 115, 22, 0.15);
+}
+
+.trackTitle {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.trackSub {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  margin-top: 2px;
+}
+
+.filtersRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.filterLabel {
+  font-size: 0.82rem;
+  font-family: var(--font-mono);
+  color: var(--text-subtle);
+  text-transform: uppercase;
+  margin-right: 4px;
+}
+
+.filterChip {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filterChip:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.activeChip {
+  background: rgba(6, 182, 212, 0.15);
+  border-color: var(--cool-primary);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.timelineList {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.timelineItem {
+  display: grid;
+  grid-template-columns: 180px 40px 1fr;
+  gap: 20px;
+  position: relative;
+  padding-bottom: 24px;
+}
+
+.timeCol {
+  text-align: right;
+  padding-top: 8px;
+}
+
+.timeText {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.durationBadge {
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  color: var(--cool-secondary);
+  background: rgba(6, 182, 212, 0.08);
+  padding: 2px 8px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-top: 4px;
+}
+
+.dotCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.nodeDot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--text-subtle);
+  border: 2px solid var(--bg-main);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  margin-top: 12px;
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+.nodeDot.challenge {
+  background: var(--warm-primary);
+  box-shadow: 0 0 12px var(--warm-primary);
+}
+
+.nodeDot.icebreaker {
+  background: #a855f7;
+  box-shadow: 0 0 12px #a855f7;
+}
+
+.nodeDot.keynote {
+  background: var(--cool-primary);
+  box-shadow: 0 0 12px var(--cool-primary);
+}
+
+.nodeDot.awards {
+  background: #eab308;
+  box-shadow: 0 0 12px #eab308;
+}
+
+.nodeDot.pairing {
+  background: #ec4899;
+  box-shadow: 0 0 12px #ec4899;
+}
+
+.connectingLine {
+  width: 2px;
+  flex-grow: 1;
+  background: rgba(255, 255, 255, 0.08);
+  margin-top: 4px;
+}
+
+.cardCol {
+  padding: 20px 24px;
+}
+
+.cardHeader {
+  margin-bottom: 8px;
+}
+
+.typeBadge {
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text-muted);
+}
+
+.typeBadge.challenge {
+  background: rgba(249, 115, 22, 0.15);
+  color: var(--warm-secondary);
+  border: 1px solid rgba(249, 115, 22, 0.3);
+}
+
+.typeBadge.icebreaker {
+  background: rgba(168, 85, 247, 0.15);
+  color: #c084fc;
+  border: 1px solid rgba(168, 85, 247, 0.3);
+}
+
+.typeBadge.keynote {
+  background: rgba(6, 182, 212, 0.15);
+  color: var(--cool-secondary);
+  border: 1px solid rgba(6, 182, 212, 0.3);
+}
+
+.typeBadge.awards {
+  background: rgba(234, 179, 8, 0.15);
+  color: #fde047;
+  border: 1px solid rgba(234, 179, 8, 0.3);
+}
+
+.typeBadge.pairing {
+  background: rgba(236, 72, 153, 0.15);
+  color: #f472b6;
+  border: 1px solid rgba(236, 72, 153, 0.3);
+}
+
+.itemTitle {
+  font-size: 1.15rem;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.itemDesc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .trackNav {
+    grid-template-columns: 1fr;
+  }
+  .timelineItem {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding-left: 24px;
+    border-left: 2px solid rgba(255, 255, 255, 0.08);
+  }
+  .timeCol {
+    text-align: left;
+    padding-top: 0;
+  }
+  .dotCol {
+    display: none;
+  }
+}

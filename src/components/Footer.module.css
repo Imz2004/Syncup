@@ -1,0 +1,243 @@
+.footer {
+  background: #080a0f;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.topGradientBar {
+  height: 2px;
+  width: 100%;
+  background: var(--fusion-gradient);
+}
+
+.footerContent {
+  padding-top: 72px;
+  padding-bottom: 36px;
+}
+
+.mainGrid {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr 1.5fr 1.6fr;
+  gap: 48px;
+  margin-bottom: 56px;
+}
+
+.brandCol {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.brandHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logoIcon {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 26px;
+  height: 26px;
+}
+
+.warmDot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--warm-gradient);
+  position: absolute;
+  left: 0;
+}
+
+.coolDot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--cool-gradient);
+  position: absolute;
+  right: 0;
+  mix-blend-mode: screen;
+}
+
+.brandName {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+.versionBadge {
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  padding: 2px 7px;
+  background: rgba(6, 182, 212, 0.15);
+  color: var(--cool-secondary);
+  border-radius: 4px;
+  border: 1px solid var(--cool-border);
+}
+
+.tagline {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.manifesto {
+  color: var(--text-subtle);
+  font-size: 0.85rem;
+  font-style: italic;
+  border-left: 2px solid var(--warm-primary);
+  padding-left: 12px;
+}
+
+.affiliation {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  color: var(--cool-secondary);
+  background: rgba(6, 182, 212, 0.06);
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(6, 182, 212, 0.2);
+  width: fit-content;
+}
+
+.affilIcon {
+  color: var(--cool-secondary);
+  flex-shrink: 0;
+}
+
+.colTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 20px;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+.linkList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.linkList li {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.linkList a {
+  color: var(--text-muted);
+  transition: all 0.2s ease;
+}
+
+.linkList a:hover {
+  color: #ffffff;
+  transform: translateX(3px);
+}
+
+.miniTag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--warm-secondary);
+  background: rgba(249, 115, 22, 0.12);
+  padding: 1px 6px;
+  border-radius: 4px;
+  border: 1px solid rgba(249, 115, 22, 0.25);
+}
+
+.infoCards {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.infoCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+}
+
+.infoIcon {
+  color: var(--cool-secondary);
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.infoHeading {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.infoSub {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.bottomBar {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.copyright {
+  font-size: 0.82rem;
+  color: var(--text-subtle);
+}
+
+.bottomLinks {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.bottomLinks a:hover {
+  color: #ffffff;
+}
+
+.dotSeparator {
+  color: var(--text-subtle);
+}
+
+@media (max-width: 1024px) {
+  .mainGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+}
+
+@media (max-width: 640px) {
+  .mainGrid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .bottomBar {
+    flex-direction: column;
+    text-align: center;
+  }
+}
